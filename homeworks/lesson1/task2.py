@@ -10,7 +10,7 @@ def get_time2(time_):
     print(f'Entered time (module datetime used): {time_in_sec}')
 
 while True:
-    time_ = input('Please input time in seconds: ')
+    time_ = input('Please enter time in seconds: ')
     # Without processing float type
     if not time_.isdigit():
         print('Entered time is incorrect.')

@@ -1,5 +1,5 @@
 while True:
-    number = input('Please input natural number: ')
+    number = input('Please enter natural number: ')
     temp = number
     if not number.isdigit():
         print('You entered not a natural number.')
