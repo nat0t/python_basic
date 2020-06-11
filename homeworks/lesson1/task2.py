@@ -4,6 +4,7 @@ def get_time1(time_):
     print(f'You entered {hours:<02}:{minutes:<02}:{seconds:<02}')
 
 def get_time2(time_):
+    # Format "d days, hh:mm:ss"
     import datetime
     time_in_sec = str(datetime.timedelta(seconds=int(time_)))
     print(f'Entered time (module datetime used): {time_in_sec}')
