@@ -5,7 +5,15 @@
 '''
 def person(name: str, surname: str, year: str,
            address: str, email: str, phone: str) -> str:
-    """Function returns information about person in one line.
+    """
+    Function returns information about person in one line.
+    :param name:
+    :param surname:
+    :param year:
+    :param address:
+    :param email:
+    :param phone:
+    :return:
     """
     person_info = {}
     person_info['name'] = name
