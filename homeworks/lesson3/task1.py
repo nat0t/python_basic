@@ -4,6 +4,7 @@
 предусмотреть обработку ситуации деления на ноль.
 '''
 def my_division(x, y) -> float:
+    """My implementation of dividing two numbers."""
     try:
         return float(x) / float(y)
     except ValueError:
