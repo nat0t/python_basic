@@ -13,5 +13,6 @@ def my_func(x, y, z):
         return sum(sorted((float(x), float(y), float(z))[:2], reverse=True))
     except ValueError:
         print("It's not numbers.")
-    else:
-        print('Unknown error.')
+
+if __name__ == '__main__':
+    print(my_func(15, -4.2, -21.7))

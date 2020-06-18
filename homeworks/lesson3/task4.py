@@ -13,8 +13,6 @@ def my_func1(x: float, y: int) -> float:
         return float(x) ** int(y) if float(x) > 0 and int(y) < 0 else print("Wrong numbers.")
     except ValueError:
         print("It's not number.")
-    else:
-        print('Unknown error.')
 
 def my_func2(x: float, y: int) -> float:
     """
@@ -36,8 +34,6 @@ def my_func2(x: float, y: int) -> float:
             print('Wrong numbers.')
     except ValueError:
         print("It's not number.")
-    else:
-        print('Unknown error.')
 
 def my_func3(x: float, y: int) -> float:
     """
@@ -58,5 +54,8 @@ def my_func3(x: float, y: int) -> float:
             return (1/x) * my_func3(x, y+1)
     except ValueError:
         print("It's not number.")
-    else:
-        print('Unknown error.')
+
+if __name__ == '__main__':
+    print(my_func1(4.8, -5))
+    print(my_func2(4.8, -5))
+    print(my_func3(4.8, -5))

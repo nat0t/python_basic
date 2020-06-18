@@ -26,11 +26,12 @@ def person(name: str, surname: str, year: str,
             f"year of birth: {person_info['year']}, address: {person_info['address']}, "
             f"e-mail: {person_info['email']}, phone: {person_info['phone']}.")
 
-name = input('Enter name of person: ')
-surname = input('Enter surname of person: ')
-year = input('Enter year of person: ')
-address = input('Enter address of person: ')
-email = input('Enter e-mail of person: ')
-phone = input('Enter phone of person: ')
-print(person(name=name, surname=surname, year=year, address=address,
-             email=email, phone=phone))
+if __name__ == '__main__':
+    name = input('Enter name of person: ')
+    surname = input('Enter surname of person: ')
+    year = input('Enter year of person: ')
+    address = input('Enter address of person: ')
+    email = input('Enter e-mail of person: ')
+    phone = input('Enter phone of person: ')
+    print(person(name=name, surname=surname, year=year, address=address,
+                 email=email, phone=phone))

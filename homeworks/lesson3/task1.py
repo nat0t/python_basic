@@ -16,9 +16,8 @@ def my_division(x, y) -> float:
         print("It's not numbers.")
     except ZeroDivisionError:
         print('Cannot be divided by zero.')
-    else:
-        print('Unknown error.')
 
-x = input('Enter dividend (x): ')
-y = input('Enter divider (y): ')
-print(f'x / y = {my_division(x, y)}')
+if __name__ == '__main__':
+    x = input('Enter dividend (x): ')
+    y = input('Enter divider (y): ')
+    print(f'x / y = {my_division(x, y)}')
