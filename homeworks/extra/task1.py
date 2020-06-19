@@ -22,19 +22,36 @@
 Вход: 11
 Выход: 5 3
 '''
-room = 5
-floor = 1
-pos = 0
-block = 1
-while room > pos + block ** 2:
-    pos += block ** 2
-    floor += block
-    block += 1
-while room > pos + block:
-    pos += block
-    floor += 1
-flat = 1
-while room > pos + flat:
-    flat += 1
-pos += flat - 1
-print(floor, flat)
+def babylon_tower1(room: str) -> tuple:
+    """
+    Function takes room number and returns floor and flat number on the floor
+    in Babylon tower.
+    :param room:
+    :return:
+    """
+    if room.isdigit() and int(room) != 0:
+        room = int(room)
+        floor = 1
+        block = 1
+        position = 0
+        # Search number of room block (1x1, 2x2, 3x3 rooms, etc.).
+        while room > position + block ** 2:
+            position += block ** 2
+            floor += block
+            block += 1
+        # Search number of floor in the current block.
+        while room > position + block:
+            position += block
+            floor += 1
+        # Search number of flat on current floor.
+        flat = 1
+        while room > position + flat:
+            flat += 1
+        position += flat - 1
+
+        return floor, flat
+    else:
+        print('Incorrect number.')
+
+room = input('Enter number of room: ')
+print(babylon_tower1(room))
