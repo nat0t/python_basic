@@ -15,16 +15,8 @@ def person(name: str, surname: str, year: str,
     :param phone:
     :return:
     """
-    person_info = {}
-    person_info['name'] = name
-    person_info['surname'] = surname
-    person_info['year'] = year
-    person_info['address'] = address
-    person_info['email'] = email
-    person_info['phone'] = phone
-    return (f"Name: {person_info['name']} {person_info['surname']}, "
-            f"year of birth: {person_info['year']}, address: {person_info['address']}, "
-            f"e-mail: {person_info['email']}, phone: {person_info['phone']}.")
+    return (f"Name: {name} {surname}, year of birth: {year}, address: {address}, "
+                     f"e-mail: {email}, phone: {phone}.")
 
 if __name__ == '__main__':
     name = input('Enter name of person: ')
