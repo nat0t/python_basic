@@ -66,8 +66,8 @@ def babylon_tower2(room: str) -> tuple:
             l_room += block ** 2
         else:
             break
-    floor = l_floor - (l_room - room) // block
-    offset = block - (l_room - room) % block - 1
+    floor = l_floor - (l_room - room) // (block - 1)
+    offset = block - (l_room - room) % (block - 1) - 1
     return floor, offset
 
 room = input('Enter number of room: ')
