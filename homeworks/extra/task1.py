@@ -22,6 +22,7 @@
 Вход: 11
 Выход: 5 3
 '''
+import time
 def babylon_tower1(room: str) -> tuple:
     """
     Function takes room number and returns floor and flat number on the floor
@@ -53,5 +54,27 @@ def babylon_tower1(room: str) -> tuple:
     else:
         print('Incorrect number.')
 
+def babylon_tower2(room: str) -> tuple:
+    #last floor in block
+    l_floor = 0
+    #last room in block
+    l_room = 0
+    room = int(room)
+    for block in range(room):
+        if room > l_room:
+            l_floor += block
+            l_room += block ** 2
+        else:
+            break
+    floor = l_floor - (l_room - room) // block
+    offset = block - (l_room - room) % block - 1
+    return floor, offset
+
 room = input('Enter number of room: ')
+start = time.time()
 print(babylon_tower1(room))
+print(f'Time of variant 1: {time.time() - start}')
+
+start = time.time()
+print(babylon_tower2(room))
+print(f'Time of variant 2: {time.time() - start}')
