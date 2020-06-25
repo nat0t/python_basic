@@ -1,7 +1,6 @@
 def get_season1(month):
-    months = ['12', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']
-    seasons = ['Winter', 'Spring', 'Summer', 'Autumn']
-    print(f"It's {seasons[months.index(month) // 3]} (with list).")
+    seasons = ('Winter', 'Spring', 'Summer', 'Autumn')
+    print(f"It's {seasons[months.index(month) // 3 % 4]} (with list).")
 
 def get_season2(month):
     seasons = {'Winter': ('12', '1', '2'),
