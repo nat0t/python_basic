@@ -11,9 +11,9 @@ Four — 4
 with open('count_en.txt') as file:
     lines = file.readlines()
 
-count = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
-lines_ru = [line.replace(key, item) for line in lines for key, item in \
-            count.items() if key in line]
+count = (('One', 'Один'), ('Two', 'Два'), ('Three', 'Три'), ('Four', 'Четыре'))
+lines_ru = [line.replace(score[0], score[1]) for line in lines for score in \
+            count if score[0] in line]
 
 with open('count_ru.txt', 'w', encoding='UTF-8') as file:
     file.writelines(lines_ru)
