@@ -27,7 +27,7 @@ for item in goods:
 
 analytics = {}
 for characteristic in characteristics:
-    analytics[characteristic] = list(product[1][characteristic] for product in goods)
+    analytics[characteristic] = [product[1][characteristic] for product in goods]
 print('Analytics:')
 for key, value in analytics.items():
     print(key, value)
