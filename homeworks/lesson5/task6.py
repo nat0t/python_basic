@@ -17,11 +17,11 @@
 with open('syllabus.txt', 'r', encoding='UTF-8') as file:
     subjects = file.readlines()
 
-subjects = map(lambda s: s.replace('(л)', ''), subjects)
-subjects = map(lambda s: s.replace('(пр)', ''), subjects)
-subjects = map(lambda s: s.replace('(лаб)', ''), subjects)
-subjects = map(lambda s: s.replace('-', ''), subjects)
+subjects = map(lambda s: s.replace('(л)', ' '), subjects)
+subjects = map(lambda s: s.replace('(пр)', ' '), subjects)
+subjects = map(lambda s: s.replace('(лаб)', ' '), subjects)
+subjects = map(lambda s: s.replace('-', ' '), subjects)
 
-lessons = {subject.split()[0]: sum(map(int, subject.split()[1:])) for subject \
+lessons = {subject.split()[0][:-1]: sum(map(int, subject.split()[1:])) for subject \
            in subjects}
 print(lessons)
