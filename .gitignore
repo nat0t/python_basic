@@ -228,3 +228,4 @@ pyvenv.cfg
 pip-selfcheck.json
 
 .idea/workspace.xml
+.idea 
