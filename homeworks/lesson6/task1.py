@@ -15,15 +15,19 @@ class TrafficLight():
 
     def running(self):
         import time
+        # import os
         count = 0
         max_count = 6
         while count < max_count:
             print(f'{TrafficLight.__color[count % 3]} color is on...')
             if count % 3 == 0:
+                # os.system('color 4')
                 time.sleep(7)
             elif count % 3 == 1:
+                # os.system('color 6')
                 time.sleep(2)
             elif count % 3 == 2:
+                # os.system('color 2')
                 time.sleep(5)
             count += 1
 
