@@ -10,8 +10,6 @@ length (длина), width (ширина). Значения данных атр�
 '''
 
 class Road():
-    _length = 0
-    _width = 0
     _mass = 25
     _depth = 5
 
@@ -22,17 +20,18 @@ class Road():
     def mass_calc(self):
         return self._length * self._width * Road._mass * Road._depth
 
-while True:
-    try:
-        length = float(input('Enter length of the road in meters: '))
-        width = float(input('Enter width of the road in meters: '))
-    except ValueError:
-        print('Incorrect input.')
-        continue
-    if length < 0 or width <= 0:
-        print('Entered negative number(-s).')
-        continue
-    break
-road = Road(length, width)
-print(f'Asphalt mass for road {length}m * {width}m * {road._mass}kg '
-        f'* {road._depth}cm is {road.mass_calc()}kg.')
+if __name__ == '__main__':
+    while True:
+        try:
+            length = float(input('Enter length of the road in meters: '))
+            width = float(input('Enter width of the road in meters: '))
+        except ValueError:
+            print('Incorrect input.')
+            continue
+        if length < 0 or width <= 0:
+            print('Entered negative number(-s).')
+            continue
+        break
+    road = Road(length, width)
+    print(f'Asphalt mass for road {length}m * {width}m * {road._mass}kg '
+            f'* {road._depth}cm is {road.mass_calc()}kg.')
