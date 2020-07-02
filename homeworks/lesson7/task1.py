@@ -32,15 +32,16 @@ class Matrix:
                           for i in range(len(self.matrix))]
         return result
 
-matrix1 = Matrix([[400, 1, 5],
-                    [6, 295, 23],
-                    [31, 50000, 19]]
-                   )
-matrix2 = Matrix([[1, 2, 3],
-                 [4, 5, 6],
-                 [7, 8, 9]]
-                 )
-print('Output:')
-print(matrix1)
-print('Addition:')
-print(matrix1 + matrix2)
+if __name__ == '__main__':
+    matrix1 = Matrix([[400, 1, 5],
+                      [6, 295, 23],
+                      [31, 50000, 19]]
+                     )
+    matrix2 = Matrix([[1, 2, 3],
+                     [4, 5, 6],
+                     [7, 8, 9]]
+                     )
+    print('Output:')
+    print(matrix1)
+    print('Addition:')
+    print(matrix1 + matrix2)
