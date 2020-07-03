@@ -41,27 +41,19 @@ class Cell:
             raise CellException('Number of cells must be positive.')
 
     def __add__(self, other):
-        result = Cell(1)
-        result.number = self.number + other.number
-        return result
+        return Cell(self.number + other.number)
 
     def __sub__(self, other):
         if self.number > other.number:
-            result = Cell(1)
-            result.number = self.number - other.number
-            return result
+            return Cell(self.number - other.number)
         raise CellException('Number of cells must be positive.')
 
     def __mul__(self, other):
-        result = Cell(1)
-        result.number = self.number * other.number
-        return result
+        return Cell(self.number * other.number)
 
     def __truediv__(self, other):
-        result = Cell(1)
-        result.number = round(self.number / other.number)
-        if result.number > 0:
-            return result
+        if round(self.number / other.number) > 0:
+            return Cell(round(self.number / other.number))
         raise CellException('Number of cells must be positive.')
 
     def make_order(self, cells_in_row):
