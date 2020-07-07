@@ -17,6 +17,12 @@
 class Matrix:
     def __init__(self, matrix):
         self.matrix = matrix
+        self.__check()
+
+    def __check(self):
+        for row in self.matrix:
+            if len(row) != len(self.matrix[0]):
+                raise Exception('Array is not a matrix')
 
     def __str__(self):
         max_len = len(max((max(map(str, row), key=len) for row in self.matrix),
@@ -26,6 +32,8 @@ class Matrix:
 
     def __add__(self, other):
         from copy import deepcopy
+        if len(self.matrix[0]) != len(other.matrix[0]):
+            raise Exception('Cannot add matrices with different dimensions.')
         result = deepcopy(self)
         result.matrix = [[(result.matrix[i][j] + other.matrix[i][j])
                           for j in range(len(self.matrix[i]))]
