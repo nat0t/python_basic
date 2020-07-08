@@ -45,7 +45,7 @@ class Date:
         except ValueError as error:
             return False
         # Checking leap year.
-        leap_year = False if not y % 4 or y % 100 and not y % 400 else True
+        leap_year = False if y % 4 or not y % 100 and y % 400 else True
         # Checking month.
         if 1 <= m <= 12:
             last_day = 30 if m in (4, 6, 9, 11) else 31
@@ -55,7 +55,7 @@ class Date:
         return False
 
 if __name__ == '__main__':
-    date1 = '22-02-1562'
+    date1 = '29-02-1600'
     date2 = 'a2-12-1'
     date3 = '41-01-1985'
     print(Date._extract_date(date1))
