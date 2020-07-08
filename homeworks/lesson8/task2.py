@@ -24,10 +24,9 @@ if __name__ == '__main__':
     y = input('Enter a divider (y): ')
     try:
         x, y = map(float, (x, y))
-    except TypeError as error:
+        try:
+            print(f'x / y = {divide(x, y)}')
+        except AltZeroDivisionError as error:
+            print(error)
+    except ValueError as error:
         print('Entered strings are not numbers.')
-
-    try:
-        print(f'x / y = {divide(x, y)}')
-    except AltZeroDivisionError as error:
-        print(error)
