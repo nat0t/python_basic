@@ -15,7 +15,7 @@ class Complex:
             return (f'{self.a}+i')
         elif self.b == -1:
             return (f'{self.a}-i')
-        if self.b > 0:
+        elif self.b > 0:
             return (f'{self.a}+{self.b}i')
         elif self.b < 0:
             return (f'{self.a}{self.b}i')
