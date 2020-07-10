@@ -14,8 +14,8 @@ if __name__ == '__main__':
     while True:
         try:
             try:
-                item = input('Enter a number for append to list (if you want'
-                             'to stop typing enter nothing): ')
+                item = input('Enter a number for append to list (to stop '
+                             'typing enter nothing and press "Enter"): ')
                 if item == '':
                     break
                 list_.append(float(item))
